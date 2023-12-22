@@ -127,3 +127,5 @@ def send_email(request):
        messages.error(request,"Message not sent ")
        return render(request,"contactus.html")
 
+def dashboard(request):
+    pass
