@@ -1,0 +1,67 @@
+{% extends "base2.html" %}
+{% block sellerlogin %}
+<head>
+  <style>
+  
+
+/* body {
+  background: #456;
+  font-family: 'Open Sans', sans-serif;
+} */
+
+
+/* The triangle form is achieved by a CSS hack */
+
+.login-header {
+  background: #24262b;
+  padding: 30px;
+  max-width: 500px;
+  
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+p{
+  font-size: medium;
+  font-family: 'Open Sans', 'sans-serif';
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 50px;
+  max-width: 500px;
+  
+}
+
+/* Every row inside .login-container is defined with p tags */
+
+
+
+  </style>
+</head>
+
+<body>
+
+    <center style="height:318px">
+        <h2 class="login-header">Log in</h2>
+      
+        <form action='/login' method="post" class="login-container">
+          <div>
+            <p><label for="loginusername">Username:</label>
+                <input type="text" id="loginusername" name="loginusername" placeholder="Enter Username" required>
+            </p>
+        </div>
+        <div>       
+            <p><label for="loginpassword">Password:</label>
+                <input type="password" id="loginpassword" name="loginpassword" placeholder="Enter password" required>
+            </p>
+        </div>
+       {%csrf_token%}
+          <p><input type="submit" value="Log in"></p>
+        </form>
+   
+    </center>
+    
+</body>
+{% endblock sellerlogin %}
