@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flipcart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-color: #24262b;
+            padding: 70px 0;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        /*responsive*/
+        @media(max-width: 767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media(max-width: 574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="http://127.0.0.1:8000/">Flipkart</a>
+            </div>
+            <center>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
+                            href="http://127.0.0.1:8000/electronics/"> <span class="caret"></span>Electronics</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Desktop and Laptop</a></li>
+                            <li><a href="#">Camera & Accessories</a></li>
+                            <li><a href="#">Health and Personal care</a></li>
+                            <li><a href="#">Powerbank</a></li>
+                            <li><a href="#">Mobile Accessory</a></li>
+                            <li><a href="#">Gaming</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span
+                                class="caret"></span>Home and Furniture</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Kitchen and dining</a></li>
+                            <li><a href="#">Bedroom Furniture</a></li>
+                            <li><a href="#">Kids Furniutre</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span
+                                class="caret"></span>Mens</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">footwear</a></li>
+                            <li><a href="#">topwear</a></li>
+                            <li><a href="#">bottomwear</a></li>
+                        </ul>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span
+                                class="caret"></span>Women</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">footwear</a></li>
+                            <li><a href="#">party dress</a></li>
+                            <li><a href="#">sportswear</a></li>
+                        </ul>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span
+                                class="caret"></span>Beauty and Toys</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Beauty and Personal care</a></li>
+                            <li><a href="#">Toys</a></li>
+                            <li><a href="#">Baby Care</a></li>
+                        </ul>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span
+                                class="caret"></span>TV and Appliances</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Beauty and Personal care</a></li>
+                            <li><a href="#">Toys</a></li>
+                            <li><a href="#">Baby Care</a></li>
+                        </ul>
+                   
+                    <li class="active"><a href="http://127.0.0.1:8000/">Travels</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span
+                                class="caret"></span>Two Wheels</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Pertol Vechiles</a></li>
+                            <li><a href="#">Electric Vechiles</a></li>
+
+                        </ul>
+                </ul>
+            </center>
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://127.0.0.1:8000/sellerindex/"><span class="fa-sharp fa-solid fa-shop"></span> Become
+                        a Seller</a>
+                </li>
+                <li><a href="http://127.0.0.1:8000/#"><span class="fa fa-shopping-cart"></span> Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        {% block elecro %}{% endblock elecro %}
+
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
