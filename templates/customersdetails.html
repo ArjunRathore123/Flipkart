@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block customerdetail %}
+<head>
+    <style>
+        table {
+            width: 750px;
+            border-collapse: collapse;
+            margin: 50px auto;
+            background-color: rgb(122, 122, 122);
+        }
+
+        /* Zebra striping */
+      
+        th{
+            font-weight: bold;
+            background-color: rgb(46, 45, 45);
+            
+        }
+    
+        td,
+        th {
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            /* border: 1px solid rgb(253, 223, 223); */
+            
+        }
+     
+ 
+        h1{
+          color:#25232e;
+        }
+    </style>
+</head>
+
+<body >
+    <center>
+        <div>
+            <h1 >Customers Details</h1>
+        </div>
+            <div>
+                <table>
+
+                    <tr>
+                      
+                        <th>First Name</th>
+                       
+                        <th>Email ID </th>
+
+                        <th>Action</th>
+                        
+                        
+                
+                    </tr>
+
+                    {% for i in customerdetail %}
+                    <tr>
+                       
+                        <td>{{i.first_name}}</td>
+                      
+                        <td>{{i.email}}</td>
+                        <td><button><a href="http://127.0.0.1:8000/customerdetail/{{i.id}}/">View</a></button><button><a href="http://127.0.0.1:8000/deletecustomerdetail/{{i.id}}/delete/">delete</a></button></td>
+                     
+                    </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+      
+    </center>
+</body>
+{% endblock customerdetail %}

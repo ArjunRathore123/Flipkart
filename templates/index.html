@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block home %}
 
+<<<<<<< HEAD
 <head>
     <style>
         .container {
@@ -63,3 +64,16 @@
     </div>
 </body>
 {% endblock home %}
+=======
+<body>
+    {% include 'messages.html' %}
+    <center style="height:338px;">
+        
+    </center>
+    <div class="container">
+        <h1>This is sent email Button</h1>
+        <a href="{%url 'sendemail' %}" class="btn btn-success">Send Email</a>
+    </div>
+</body>
+{% endblock home %} 
+>>>>>>> 94e034a8d2694c6247038fdf68c8ae56cfedbdb7

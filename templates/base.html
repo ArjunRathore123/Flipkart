@@ -126,16 +126,27 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
+=======
+  {% load static %}
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/"><img src="{% static 'logos/logo.jpg' %}"
+            alt="Flipcart Image" style='width:25px;height:25px;'></a>
+>>>>>>> 94e034a8d2694c6247038fdf68c8ae56cfedbdb7
         <a class="navbar-brand" href="http://127.0.0.1:8000/">Flipkart</a>
       </div>
       <ul class="nav navbar-nav">
         <li><a href="http://127.0.0.1:8000/">Home</a></li>
         <li><a href="http://127.0.0.1:8000/">About</a></li>
         <li><a href="http://127.0.0.1:8000/">Carrers</a></li>
+<<<<<<< HEAD
         <li class="dropdown"><a data-toggle="dropdown" href="http://127.0.0.1:8000/"> <span class="caret"></span>Contact us</a>
           <ul class="dropdown-menu">
             <li><a href="#">91+11111111</a></li>
@@ -150,6 +161,39 @@
         </li>
         <li><a href="http://127.0.0.1:8000/#"><span class="fa fa-shopping-cart"></span> Cart</a></li>
       </ul>
+=======
+        <li><a href="http://127.0.0.1:8000/contactus/">Contact us</a>
+      </ul>
+      {% if user.is_authenticated %}
+      <ul class="nav navbar-nav">
+      <li><a href="http://127.0.0.1:8000/product/">Products</a></li>
+      <li><a href="http://127.0.0.1:8000/customerslist/">Customers</a></li>
+      <li><a href="http://127.0.0.1:8000/category/">Category</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown"><a data-toggle="dropdown" href="http://127.0.0.1:8000/"> <span class="caret"></span>My
+            Account</a>
+          <ul class="dropdown-menu">
+            <li><a href="/logout">Logout</a></li>
+          </ul>
+       
+        <li><a href="http://127.0.0.1:8000/sellerindex/"><span class="fa-sharp fa-solid fa-shop"></span> Become a
+            Seller</a>
+        </li>
+        <li><a href="http://127.0.0.1:8000/"><span class="fa fa-shopping-cart"></span> Cart</a></li>
+      </ul>
+      {% else %}
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://127.0.0.1:8000/register/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="http://127.0.0.1:8000/login/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="http://127.0.0.1:8000/sellerindex/"><span class="fa-sharp fa-solid fa-shop"></span> Become a
+            Seller</a>
+        </li>
+        <li><a href="http://127.0.0.1:8000/"><span class="fa fa-shopping-cart"></span> Cart</a></li>
+      </ul>
+      {% endif %}
+>>>>>>> 94e034a8d2694c6247038fdf68c8ae56cfedbdb7
     </div>
   </nav>
 
@@ -157,6 +201,7 @@
     {% block home %}{% endblock home %}
     {% block login %}{% endblock login %}
     {% block reg %}{% endblock reg %}
+<<<<<<< HEAD
 
   </div>
 
@@ -168,6 +213,27 @@
   <br>
   <br>
   <br>
+=======
+    {% block prodetail %}{% endblock prodetail %}
+    {% block customerdetail %}{% endblock customerdetail %}
+    {% block viewproduct %}{% endblock viewproduct %}
+    {% block viewcategory %}{% endblock viewcategory %}
+    {%block category%}{%endblock category%}
+
+
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+>>>>>>> 94e034a8d2694c6247038fdf68c8ae56cfedbdb7
 
   <footer class="footer">
     <div class="container">

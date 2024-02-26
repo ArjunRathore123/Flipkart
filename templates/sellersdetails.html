@@ -1,0 +1,66 @@
+{% extends "base2.html" %}
+{% block sellerdetail %}
+<head>
+    <style>
+        table {
+            width: 750px;
+            border-collapse: collapse;
+            margin: 50px auto;
+            background-color: rgb(138, 136, 136);
+        }
+
+        /* Zebra striping */
+      
+        th{
+            font-weight: bold;
+            background: #24262b;
+        }
+    
+        td,
+        th {
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+           
+            
+        }
+     
+  
+        h1{
+          color:#312322;
+        }
+    </style>
+</head>
+
+<body >
+    <center>
+        <div>
+            <h1 >Sellers Details</h1>
+        </div>
+            <div>
+                <table>
+
+                    <tr>
+                        <th>First Name</th>
+                        <th>Email ID </th>
+                        <th>Action</th>
+                        
+                
+                    </tr>
+
+                    {% for i in sellerdetail %}
+                    <tr>
+                        <td>{{i.first_name}}</td>                       
+                        <td>{{i.email}}</td>
+                        <td><button><a href="http://127.0.0.1:8000/viewseller/{{i.id}}/">View</a></button><button><a href="http://127.0.0.1:8000/deleteseller/{{i.id}}/delete/">Delete</a></button></td>
+                        
+                    </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+      
+    </center>
+</body>
+{% endblock sellerdetail %}

@@ -124,21 +124,38 @@
         }
     </style>
 </head>
+<<<<<<< HEAD
 
+=======
+{% load static %}
+>>>>>>> 94e034a8d2694c6247038fdf68c8ae56cfedbdb7
 <body>
 
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 94e034a8d2694c6247038fdf68c8ae56cfedbdb7
                 <a class="navbar-brand" href="http://127.0.0.1:8000/">Flipkart Seller Hub</a>
             </div>
             <ul class="nav navbar-nav">
                 <li><a href="http://127.0.0.1:8000/sellerindex/">Sell Online</a></li>
                 <li><a href="http://127.0.0.1:8000/">Fees and commision</a></li>
+<<<<<<< HEAD
                 
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://127.0.0.1:8000/sellreg/"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+=======
+                <li><a href="http://127.0.0.1:8000/sellerslist/">Sellers</a></li>
+                
+            </ul>
+            {% if user.is_authenticated %}
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://127.0.0.1:8000/sellreg/"><span class="glyphicon glyphicon-user"></span>My Account</a>
+>>>>>>> 94e034a8d2694c6247038fdf68c8ae56cfedbdb7
                 </li>
                 <li><a href="http://127.0.0.1:8000/sellerlogin/"><span class="glyphicon glyphicon-log-in"></span> Login</a>
                 </li>
@@ -147,6 +164,19 @@
                 </li>
 
             </ul>
+<<<<<<< HEAD
+=======
+            {% else %}
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown"><a data-toggle="dropdown" href="http://127.0.0.1:8000/"> <span class="caret"></span>My
+                    Account</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/logout">Logout</a></li>
+                  </ul>
+               
+            </ul>
+            {% endif %}
+>>>>>>> 94e034a8d2694c6247038fdf68c8ae56cfedbdb7
         </div>
     </nav>
 
@@ -155,6 +185,10 @@
         {% block sellerlogin %}{% endblock sellerlogin %}
         {% block home %}{% endblock home %}
         {% block sellreg %}{% endblock sellreg %}
+<<<<<<< HEAD
+=======
+        {% block sellerdetail %}{% endblock sellerdetail %}
+>>>>>>> 94e034a8d2694c6247038fdf68c8ae56cfedbdb7
 
     </div>
 

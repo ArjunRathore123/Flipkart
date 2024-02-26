@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block reg %}
 
+<<<<<<< HEAD
 <body>
     <center style="height:318px">
         <h2 class="login-header" style=" color:grey; height:100px">Sign up</h2>
@@ -8,15 +9,61 @@
             <div>
                 <p><label for="fname">First Name:</label>
                     <input type="text" id="fname" name="fname" required>
+=======
+<head>
+    <style>
+        .login-header {
+            background: #24262b;
+            padding: 20px;
+            max-width: 500px;
+            font-weight: normal;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .login-container {
+            background: #ebebeb;
+            padding: 12px;
+            max-width: 500px;
+
+        }
+
+        p {
+            font-size: medium;
+            font-family: 'Open Sans', 'sans-serif';
+        }
+    </style>
+</head>
+
+<body>
+    <center style="height:318px">
+        <h2 class="login-header">Sign up</h2>
+        <form action="/signup" method="post" class="login-container">
+
+            {% comment %} <div>
+                <p><label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter Username" required>
+                </p>
+            </div> {% endcomment %}
+            <div>
+                <p><label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" required>
+>>>>>>> 94e034a8d2694c6247038fdf68c8ae56cfedbdb7
                 </p>
             </div>
             <div>
                 <p><label for="lname">Last Name:</label>
+<<<<<<< HEAD
                     <input type="text" id="lname" name="lname" required>
+=======
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+>>>>>>> 94e034a8d2694c6247038fdf68c8ae56cfedbdb7
                 </p>
             </div>
             <div>
                 <p><label for="email">Email:</label>
+<<<<<<< HEAD
                     <input type="email" id="email" name="email" required>
                 </p>
             </div>
@@ -33,10 +80,29 @@
             <div>
                 <p><label for="birthday">Date of birth:</label>
                     <input type="date" id="birthday" name="birthday" max="2021-02-07" required>
+=======
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </p>
+            </div>
+            <div>
+                <p><label for="number">Mobile Number:</label>
+                    <input type="text" id="number" name="number" placeholder="Enter your Mobile Number" required>
+                </p>
+            </div>
+            <div>
+                <p><label for="address">Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your Address" required>
+                </p>
+            </div>
+            <div>
+                <p><label for="birthday">Date of Birth:</label>
+                    <input type="date" id="birthday" name="birthday">
+>>>>>>> 94e034a8d2694c6247038fdf68c8ae56cfedbdb7
                 </p>
             </div>
             <div>
                 <p><label for="gender">Gender:</label>
+<<<<<<< HEAD
                     <input type="radio" name="gender" id="male">
                     <label for="male">Male</label>
 
@@ -54,3 +120,29 @@
 </body>
 {% endblock reg %}
 
+=======
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                    <input type="radio" name="gender" value="Other"> Other
+
+                </p>
+            </div>
+            <div>
+                <p><label for="password1">Password:</label>
+                    <input type="password" id="password1" name="password1" placeholder="Enter password" required>
+                </p>
+            </div>
+            <div>
+                <p><label for="password2">Confirm Password:</label>
+                    <input type="password" id="password2" name="password2" placeholder="Confirm password" required>
+                </p>
+            </div>
+
+            {% csrf_token %}
+            <p><input type="submit" value="Submit"></p>
+        </form>
+    </center>
+
+</body>
+{% endblock reg %}
+>>>>>>> 94e034a8d2694c6247038fdf68c8ae56cfedbdb7

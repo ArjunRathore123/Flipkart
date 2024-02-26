@@ -6,7 +6,11 @@ import sys
 
 def main():
     """Run administrative tasks."""
+<<<<<<< HEAD
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'flipkart.settings')
+=======
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'flipcart.settings')
+>>>>>>> 94e034a8d2694c6247038fdf68c8ae56cfedbdb7
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

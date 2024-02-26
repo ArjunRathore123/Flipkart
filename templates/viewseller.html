@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block view %}
+
+<body>
+    <center style="height:318px">
+        <h2 class="login-header">Details</h2>
+        {% if getsell %}
+        <form class="login-container">
+
+
+            <div>
+                <p><label for="fname">First Name:</label>
+                    <span>{{getsell.first_name}}</span>
+                </p>
+            </div>
+            <div>
+                <p><label for="lname">Last Name:</label>
+                    <span>{{getsell.last_name}}</span>
+                </p>
+            </div>
+            <div>
+                <p><label for="email">Email:</label>
+                    <span>{{getsell.email}}</span>
+                </p>
+            </div>
+            <div>
+                <p><label for="mnumber">Mobile Number:</label>
+                    <span>{{getsell.mobile_number}}</span>
+            </div>
+
+            <div>
+                <p><label for="birthday">Date of birth:</label>
+                    <span>{{getsell.date_of_birth}}</span>
+                </p>
+            </div>
+            <div>
+                <p><label for="gender">Gender:</label>
+                    <span>{{getsell.gender}}</span>
+
+                </p>
+            </div>
+            <div>
+                <p><label for="address">Address:</label>
+                    <span>{{getsell.address}}</span>
+
+                </p>
+            </div>
+
+
+        </form>
+        {% endif %}
+    </center>
+</body>
+{% endblock view %}
